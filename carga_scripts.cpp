@@ -12,6 +12,11 @@ struct ConsoleBox
 
 ConsoleBox *consoleBox = new ConsoleBox;
 
+/* El usuario o bien coloca la ruta absoluta o bien a través de la ruta relativa colocando el archivo dentro del proyecto
+referencia al nombre con su extensión */
+
+const char* base_path = "../";
+
 void load_script(const char* filename, bool show_script)
 {
     string script;
@@ -54,7 +59,10 @@ void load_script(const char* filename, bool show_script)
 void load_script()
 {
     char filename[500];
-    printf("Archivo: ");
+    printf("Introduce el nombre del archivo (sin ruta absoluta): ");
     scanf("%499s", filename);
-    load_script(filename, true);
+
+    string full_path = string(base_path) + filename;
+
+    load_script(full_path.c_str(), true);
 }
