@@ -1,5 +1,11 @@
 https://github.com/gabriel140282/Caso-Final-Integrador-Tema-3.git
 
+# Nota a tener en cuenta:
+
+Para un correcto funcionamiento del programa, el usuario deberá colocar el archivo que desea abrir y leer por terminal en el directorio del proyecto donde se encuentran tanto los archivos .cpp y .h como el propio main.cpp. La ruta del archivo deberá de ser relativa (las rutas absolutas no están configuradas en el programa). Un ejemplo de esto sería poner en la terminal:
+
+prueba.txt
+
 Trabajos prácticos
 1. Carga de scripts en tiny-lisp
 El módulo Labmain.cpp define la función load_script(), que se utiliza para cargar un script en la memoria y aplicarle la coloración sintáctica. Esta función se basa en la librería estándar de C.
