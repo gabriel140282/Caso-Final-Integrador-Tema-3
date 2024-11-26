@@ -117,4 +117,10 @@ Por último, ten en cuenta que este código no realiza una comprobación complet
 
 # Calificacion (Carlos Luis Condor Espinosa)
 
--
+-El struct llamado ConsoleBox puede ir en el cpp en vez de en el header. Al ser un struct uno a priori piensa que debería ir en el header, pero al implementar funciones de tipo void es más recomendable meterlo en el cpp.
+
+-En la línea 17 del código, el comentario no explica bien lo que hace la variable global. No es el directorio actual del main, es el directorio en donde se encuentra el .exe (que en este caso es en la carpeta cmake-build-debug.
+
+-En la línea 4 y 5 del header se incluyeron dos librerias que no estan siendo utilizadas "<string> y <iostream>". Incluir librerías sin que se utilizen podría hacer que el programa termine usando más recursos de los que debe.
+
+-No es recomendable usar el using namespace std;. Esto porque puede causar conflicto con otras funciones y además por medidas de seguridad.
