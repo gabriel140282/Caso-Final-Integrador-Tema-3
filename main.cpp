@@ -1,9 +1,8 @@
 #include "carga_scripts.h"
-#include <iostream>
-
-using namespace std;
+/*Se elimino librerias inecesarias*/
 
 int main() {
+    //load_script("prueba.txt",true);
     load_script();
     return 0;
 }
